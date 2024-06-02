@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 
 url1 = "https://fr.wikipedia.org/wiki/Ing%C3%A9nieur"
 url2 = "https://fr.wikipedia.org/wiki/Dipl%C3%B4me"
+url3 = "https://fr.wikipedia.org/wiki/Informatique"
 url = "http://olympus.realpython.org/profiles/aphrodite"
 
 def get_page_words(url):
@@ -21,10 +22,13 @@ def get_page_words(url):
     except Exception as e:
         print(f"An error occurred: {e}")
     
-# words_url1 = get_page_words(url1)
-# words_url2 = get_page_words(url2)
+words_url1 = get_page_words(url1)
+words_url2 = get_page_words(url2)
+words_url3 = get_page_words(url3)
 
-words_from_dummy_url = get_page_words(url)
+words_from_dummy_url = get_page_words(url1)
+words_from_dummy_url = get_page_words(url2)
+words_from_dummy_url = get_page_words(url3)
 
 with open('wordlist.txt', 'w', encoding='utf-8') as file:
     for word in words_from_dummy_url:
