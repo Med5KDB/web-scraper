@@ -7,7 +7,7 @@ url3 = "https://fr.wikipedia.org/wiki/Informatique"
 
 
 def get_page_words(url):
-    try:s
+    try:
         response = requests.get(url)
         html = response.text
         
